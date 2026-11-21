@@ -5,7 +5,7 @@
 <h2>Data we store</h2><ul>
 <li><b>Account:</b> your user ID and e-mail address from Google, Apple or e-mail sign-in (Firebase Authentication).</li>
 <li><b>Settings:</b> which blocks are on, strict mode and Zen mode end times, your own block list, app limits, Night Shield and payday settings (Cloud Firestore), so they come back after reinstalling.</li>
-<li><b>Purchases:</b> your plan and its end date. Payments are handled by Google Play; we never see card details.</li>
+<li><b>Purchases:</b> your plan and its end date. Payments are handled by Google Play (Android) and, for purchases on the website or computers, by Stripe; we never see card details.</li>
 <li><b>On the phone only:</b> your PIN as a salted hash and simple counters of blocked attempts. They never leave the phone.</li></ul>
 <h2>VPN service</h2><p>HappyHuman uses Android's VpnService only to create a local DNS filter on your phone. Only domain-name lookups pass through it; they are checked on the device and answered or forwarded to a family-safe public resolver (CleanBrowsing) or Cloudflare. We do not route, log or inspect your other traffic and we do not run any VPN servers.</p>
 <h2>Accessibility service</h2><p>With your permission, the "HappyHuman Guard" accessibility service reads the browser address bar and the text on screen of the apps you chose to block, to close blocked apps, blocked sites and adult posts, and to stop the app from being removed or reset while your blocks are on. This happens only on your phone; nothing on your screen is recorded, stored or sent anywhere.</p>

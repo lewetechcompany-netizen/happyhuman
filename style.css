@@ -10,3 +10,17 @@ main{max-width:1080px;margin:0 auto;padding:0 24px 80px}h1,h2{font-family:"DM Se
 .dark{color:#fff;border:2.5px solid #3DDC97}.dark p{color:#dfe6ee}.tag{display:inline-block;font-size:11px;letter-spacing:.08em;background:#3DDC97;color:#0b2a1e;border-radius:99px;padding:2px 10px;margin-bottom:10px;font-weight:700}
 .price{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.price .card{text-align:center}.big{font-size:40px;font-family:"DM Serif Display",Georgia,serif}
 .doc{max-width:760px}.doc h2{margin-top:36px}footer{border-top:1px solid var(--line);padding:28px 24px;text-align:center;color:var(--muted);font-size:14px}
+.center{text-align:center}.muted{color:var(--muted)}.small{font-size:14px;color:var(--muted);margin-top:14px}
+section h2.center,section>h2.center{font-size:clamp(30px,4vw,40px);margin:56px 0 8px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:20px 0 10px}
+.steps div{padding:8px 4px}.steps b{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;align-items:center;justify-content:center;font-size:15px}
+.steps h3{margin:10px 0 4px;font-size:18px}.steps p{margin:0;color:var(--muted);font-size:15px}
+.price .card ul{list-style:none;padding:0;margin:16px 0 0;text-align:left;font-size:15px;color:var(--muted)}
+.price .card li{padding:6px 0;border-top:1px solid var(--line)}.price .card li:before{content:"✓ ";color:var(--green);font-weight:700}
+.best{border:2px solid var(--gold)}.best .tag{background:var(--gold);color:#fff}
+.status{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;border-radius:99px;padding:2px 10px;margin-bottom:10px}
+.status.ok{background:#dff5ea;color:#145c3a}.status.soon{background:#efe7d6;color:#6b5326}
+.faq{margin:0 auto}.faq details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 20px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:600}.faq details p{color:var(--muted);margin:10px 0 0}
+@media(max-width:640px){nav a{margin-left:12px;font-size:14px}nav a:nth-child(2),nav a:nth-child(4){display:none}.btn.alt{margin:10px 0 0}}
+.g3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}.faq{max-width:760px}
