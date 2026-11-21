@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>HappyHuman – Take back control of your phone</title>
 <meta name="description" content="HappyHuman blocks adult content, online casinos and impulse spending – with a strict mode that can't be bypassed. 7 days free.">
+<link rel="icon" href="img/icon.png">
+<meta property="og:image" content="https://happyhuman.info/img/feature.png">
+<meta property="og:title" content="HappyHuman – Block what pulls you down">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -162,14 +165,37 @@ footer a{margin-left:20px}footer a:hover{color:var(--text)}
 #bgfx{position:fixed;inset:0;z-index:-1;pointer-events:none}
 .cursor-glow{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(232,194,122,.07),transparent 60%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);transition:opacity .3s}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.reveal,.row{opacity:1;transform:none;filter:none}}
+
+/* app gallery */
+.gal-wrap{position:relative;margin-top:50px}
+.gal{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 4px 30px;scrollbar-width:none}
+.gal::-webkit-scrollbar{display:none}
+.gal figure{flex:0 0 auto;width:min(270px,70vw);scroll-snap-align:center;margin:0;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.gal img{width:100%;display:block;border-radius:26px;border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.gal figure:hover{transform:translateY(-10px) scale(1.02)}
+.gal figcaption{text-align:center;color:var(--muted);font-size:14px;margin-top:14px}
+.gal-btn{position:absolute;top:45%;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(21,24,36,.85);color:var(--text);font-size:20px;cursor:pointer;backdrop-filter:blur(8px);transition:.2s;z-index:2}
+.gal-btn:hover{border-color:var(--gold);color:var(--gold)}
+.gal-prev{left:-10px}.gal-next{right:-10px}
+.dots{display:flex;gap:8px;justify-content:center}
+.dots b{width:8px;height:8px;border-radius:8px;background:#2b3046;transition:.3s;cursor:pointer}
+.dots b.on{width:26px;background:var(--gold)}
+.app-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.store{display:inline-flex;align-items:center;gap:12px;padding:12px 22px;border-radius:14px;background:#000;border:1px solid #333;color:#fff;transition:.2s}
+.store:hover{border-color:var(--gold);transform:translateY(-2px)}
+.store small{display:block;font-size:11px;color:#aaa;line-height:1}.store b{font-size:18px;line-height:1.2}
+.store.soon{opacity:.55}
+.feat-banner{margin:60px auto 0;max-width:900px;border-radius:24px;overflow:hidden;border:1px solid rgba(232,194,122,.3);box-shadow:0 30px 90px rgba(232,194,122,.1)}
+.feat-banner img{width:100%;display:block}
+@media(max-width:900px){.gal-btn{display:none}}
 </style>
 </head>
 <body>
 <canvas id="bgfx"></canvas><div class="cursor-glow"></div>
 
 <nav><div class="wrap">
-<a class="logo" href="#"><i>☺</i>HappyHuman</a>
-<div class="links"><a href="#features">Features</a><a href="#strict">Strict mode</a><a href="#zen">Zen mode</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div>
+<a class="logo" href="#"><img src="img/icon.png" alt="" width="32" height="32" style="border-radius:9px">HappyHuman</a>
+<div class="links"><a href="#app">App</a><a href="#features">Features</a><a href="#strict">Strict mode</a><a href="#zen">Zen mode</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div>
 <a class="btn btn-gold" href="#pricing">Start free</a>
 </div></nav>
 
@@ -204,6 +230,29 @@ footer a{margin-left:20px}footer a:hover{color:var(--text)}
 <div><b class="gold">1 h–1 y</b><span>lock length you choose</span></div>
 <div><b class="gold">100%</b><span>filtered on your device</span></div>
 </div></div>
+
+<section id="app"><div class="wrap">
+<div class="center reveal"><span class="eyebrow">On your phone</span>
+<h2>See it in <span class="serif gold">action</span>.</h2>
+<p class="sub">Simple, calm and built to hold. This is what HappyHuman looks like on your phone.</p></div>
+<div class="gal-wrap reveal">
+<button class="gal-btn gal-prev" aria-label="Previous">‹</button>
+<div class="gal">
+<figure><img src="img/shot1.png" alt="HappyHuman home screen with blocks on" loading="lazy"><figcaption>All blocks in one place</figcaption></figure>
+<figure><img src="img/shot2.png" alt="Strict mode screen" loading="lazy"><figcaption>Strict mode – no off switch</figcaption></figure>
+<figure><img src="img/shot3.png" alt="Short videos and scroll breaks" loading="lazy"><figcaption>Stop doomscrolling</figcaption></figure>
+<figure><img src="img/shot4.png" alt="Setup screen" loading="lazy"><figcaption>Ready in 60 seconds</figcaption></figure>
+<figure><img src="img/shot5.png" alt="Sign in screen" loading="lazy"><figcaption>Free for 7 days</figcaption></figure>
+</div>
+<button class="gal-btn gal-next" aria-label="Next">›</button>
+<div class="dots"></div>
+</div>
+<div class="app-cta reveal">
+<a class="store" href="#pricing"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#3bccff" d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#48ff48" d="m16.8 8.6-3.4 3.4-9.8-10.2c.3-.1.7-.1 1 .1z"/><path fill="#ff3a44" d="m16.8 15.4-12.2 6.9c-.3.2-.7.2-1 .1l9.8-10.4z"/><path fill="#ffd400" d="m20.6 13.4-3.8 2.1-3.4-3.5 3.4-3.4 3.8 2.1c.8.5.8 1.7 0 2.7z"/></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
+<span class="store soon"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9C5.9 6.8 4.2 7.9 3.3 9.5c-1.8 3.2-.5 7.9 1.3 10.5.9 1.3 1.9 2.7 3.2 2.6 1.3-.1 1.8-.8 3.4-.8s2 .8 3.4.8 2.3-1.3 3.1-2.6c1-1.5 1.4-2.9 1.4-3-.1 0-2.7-1-2.7-4.4zM13.9 4.9c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.4-.6 3.1-1.5z"/></svg><span><small>COMING SOON ON THE</small><b>App Store</b></span></span>
+</div>
+<div class="feat-banner reveal"><img src="img/feature.png" alt="HappyHuman – Block what pulls you down. Keep what lifts you up." loading="lazy"></div>
+</div></section>
 
 <section id="features"><div class="wrap">
 <div class="center reveal"><span class="eyebrow">Everything included</span>
@@ -348,6 +397,15 @@ for(let i=0;i<55;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches)(function d(){cx.clearRect(0,0,W,H);P.forEach(p=>{p.y-=p.v;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fillStyle=`rgba(232,194,122,${p.a})`;cx.fill()});requestAnimationFrame(d)})();
 // nav shrink on scroll
 const nv=document.querySelector('nav');addEventListener('scroll',()=>nv.style.boxShadow=scrollY>20?'0 10px 40px rgba(0,0,0,.4)':'none');
+
+// gallery
+const gal=document.querySelector('.gal'),figs=[...gal.children],dots=document.querySelector('.dots');
+figs.forEach((f,i)=>{const d=document.createElement('b');d.onclick=()=>go(i);dots.appendChild(d)});
+let cur=0;const go=i=>{cur=(i+figs.length)%figs.length;gal.scrollTo({left:figs[cur].offsetLeft-gal.clientWidth/2+figs[cur].clientWidth/2,behavior:'smooth'})};
+const upd=()=>{const mid=gal.scrollLeft+gal.clientWidth/2;let best=0,bd=1e9;figs.forEach((f,i)=>{const d=Math.abs(f.offsetLeft+f.clientWidth/2-mid);if(d<bd){bd=d;best=i}});cur=best;[...dots.children].forEach((d,i)=>d.classList.toggle('on',i===best))};
+gal.addEventListener('scroll',()=>requestAnimationFrame(upd));upd();
+document.querySelector('.gal-prev').onclick=()=>go(cur-1);document.querySelector('.gal-next').onclick=()=>go(cur+1);
+let auto=setInterval(()=>go(cur+1),3500);gal.addEventListener('pointerenter',()=>clearInterval(auto));
 </script>
 </body>
 </html>
